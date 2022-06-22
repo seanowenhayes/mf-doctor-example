@@ -6,6 +6,7 @@ import DoctorList from "./components/DoctorList";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import "./index.scss";
 import DoctorProfile from "doctorProfile/src/components/DoctorProfile"
+import Favourites from 'favourites/Favourite';
 
 const App = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => (
       <div className="my-8 flex-1 flex">
         <Routes>
           <Route path="/" exact element={<DoctorList />} />
+          <Route path="/favourites" element={<Favourites />} />
           <Route path="/doctor/:id" element={
             <div className="flex flex-1 items-center justify-center">
               <DoctorProfile />
